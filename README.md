@@ -1,7 +1,7 @@
 # Project Name: Zill-Woah
 
 > Project description
-Zillow - clone front end project
+Zillow clone front end project
 ## Related Projects
 
   - https://github.com/teamName/repo
