@@ -4,8 +4,11 @@ const app = express();
 const cors = require('express');
 const Bars = require('../database/Bars.js');
 const path = require('path');
+const normalizePort = require('normalize-port');
 
-const PORT = 3000;
+const PORT = 8081;
+
+// const PORT = 3001;
 
 // app.use(cors());
 app.use(bodyParser.json());

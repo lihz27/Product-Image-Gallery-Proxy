@@ -3,20 +3,20 @@ const bodyParser = require('body-parser');
 const Galleries = require('../database/Gallery.js');
 const path = require('path');
 const app = express();
+var cors = require('cors');
 
+const port = 8081;
+
+app.use(cors());
 app.use(express.static(__dirname + '/../dist/'));
 
-let port = 3001;
-
 app.get('/:id', (req, res) => {
-	console.log('hi');
+	console.log('initialize page request...');
 	res.sendFile(path.join(`${__dirname}/../dist/index.html`));
 });
 
 app.get('/homes/:id', (req, res) => {
-	console.log('req.params.urlId is ', req.params.id)
 	Galleries.find({id: req.params.id}, (err, data) => {
-		console.log('data is ', data);
 		if (err) {
 			console.log("Error: ", err);
 		} else {
@@ -24,7 +24,6 @@ app.get('/homes/:id', (req, res) => {
 		}
 	})
 });
-
 
 app.listen(port, () => {
 	console.log(`listening on port ${port}`);

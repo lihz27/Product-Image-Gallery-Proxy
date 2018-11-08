@@ -7,7 +7,7 @@
     "start": "nodemon proxy-server/proxy-server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jack Li",
   "license": "ISC",
   "dependencies": {
     "morgan": "^1.9.0"

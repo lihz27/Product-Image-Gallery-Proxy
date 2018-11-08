@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
-import { PreQuery } from './components/PreQuery.js';
+import { PreQuery } from './Components/PreQuery.js';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'http://localhost:3003/graphql',
 });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <PreQuery />
   </ApolloProvider>,
-  document.getElementById('additional-info'),
+  document.getElementById('app'),
 );

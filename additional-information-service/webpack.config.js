@@ -2,6 +2,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: __dirname + '/src/index.js',
+  optimization: {
+    minimizer: [new UglifyJsPlugin()]
+  },
   module: {
     rules: [
       {
@@ -19,9 +22,5 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: __dirname + '/public',
-  },
-  optimization : {
-    minimize: true,
-    minimizer: [new UglifyJsPlugin()]
   }
 };
