@@ -1,11 +1,8 @@
 import React from 'react';
-import TopNav from '../src/components/Nav/TopNav.js';
 import NavToolbar from './components/Nav/NavToolbar.js';
 import Gallery from '../src/components/Gallery/Gallery.js';
 import PropertyInfo from '../src/components/Nav/PropertyInfo.js';
 import Logo from '../src/components/Nav/Logo.js'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, DropdownButton, Image } from 'react-bootstrap';
-import ImageGallery from '../src/components/Gallery/ImageGallery.js';
 import axios from 'axios';
 
 export default class App extends React.Component {
@@ -19,6 +16,7 @@ export default class App extends React.Component {
     }
     this.updateWindowHeight = this.updateWindowHeight.bind(this);
   }
+  
   componentDidMount() {
     let imageId = Number(window.location.pathname.replace(/\//, ''));
     imageId = imageId % 100;
@@ -51,7 +49,6 @@ export default class App extends React.Component {
 
   render(){
     const {height, slider, propInfo} = this.state
-    // console.log('propInfo, ', propInfo)
     if (propInfo.length) {
       return (
         <div className="main-wrapper">
@@ -63,10 +60,9 @@ export default class App extends React.Component {
       )
     } else {
       return (
-        <div id="loading-page">Loading...</div>
+        <div id="loading-page">NOT Loading...</div>
       )
     }
-    
   };
 };
 

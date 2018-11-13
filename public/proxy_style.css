@@ -1,0 +1,8 @@
+#sidebar {
+  float: right;
+  margin-right: 10%;
+}
+#main{
+ float:left;
+ margin-left: 10%;
+}
