@@ -8,10 +8,6 @@
 
 > Zill-Woah is a emulation of the real estate and rental marketplace, Zillow site's page.  This repo contains the "Navigation bar" and "Image Gallery" component for that project, which fetches house property information and images from the database, displays them to the user via a React frontend, and allows the user to interact with these components
 
-## Demo
-
-http://otc-proxy.us-west-1.elasticbeanstalk.com/
-
 ## Related Projects
 
   - [Proxy server for running all components](https://github.com/Only-the-Best/Jack-Li-Proxy)
